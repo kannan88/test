@@ -1,0 +1,78 @@
+<!--
+<script type="text/javascript">
+    var ip = location.host;
+    alert(ip);
+</script>-->
+
+<!--
+<html>
+	
+</html><script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
+                                                      
+<script>
+	 
+	sessionStorage.setItem("myipaddes", myip);
+</script>
+-->
+<!--
+
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+ <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+function myIP(){
+$("#btn").click(function(){
+            var geocoder =  new google.maps.Geocoder();
+    geocoder.geocode( { 'address': 'kadambur'}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            alert("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng()); 
+			  
+			  
+			//document.getElementById("city").value() = results[0].geometry.location.lat();
+			  
+			  
+          } else {
+            alert("Something got wrong " + status);
+          }
+        });
+});
+}
+ </script>
+</head>
+<body onload="myIP()">
+<input type="text" id= "city">
+<input id="btn" type="button" value="get Lat&Long" />
+</body>
+</html>
+-->
+
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <textarea id="txtAddress" rows="3" cols="25"></textarea>
+    <br />
+    <input type="button" onclick="GetLocation()" value="Get Location" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+    <!--
+        function GetLocation() {
+            var geocoder = new google.maps.Geocoder();
+            var address = document.getElementById("txtAddress").value;
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var latitude = results[0].geometry.location.lat();
+                    var longitude = results[0].geometry.location.lng();
+                    alert("Latitude: " + latitude + "\nLongitude: " + longitude);
+                } else {
+                    alert("Request failed.")
+                }
+            });
+        };
+        //-->
+    </script>
+</body>
+</html>
